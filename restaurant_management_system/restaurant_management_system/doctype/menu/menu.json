@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "Me.###",
+ "autoname": "ME.###",
  "creation": "2024-05-23 18:25:29.157510",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -37,7 +37,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-23 23:33:29.692363",
+ "modified": "2024-05-24 12:36:26.952480",
  "modified_by": "Administrator",
  "module": "Restaurant Management System",
  "name": "Menu",
