@@ -1,37 +1,52 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "MC.###",
- "creation": "2024-05-23 18:36:46.032709",
+ "autoname": "REP.###",
+ "creation": "2024-05-23 19:07:01.976815",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "category",
-  "description"
+  "date",
+  "sales",
+  "expenses",
+  "profit"
  ],
  "fields": [
   {
-   "fieldname": "category",
-   "fieldtype": "Select",
+   "fieldname": "date",
+   "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Category",
-   "options": "Appetizer\nSoup\nSalad\nMain Course\nSide Dish\nDessert\nBeverages",
+   "label": "Date",
    "reqd": 1
   },
   {
-   "fieldname": "description",
-   "fieldtype": "Data",
+   "fieldname": "sales",
+   "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Description",
+   "label": "Total Sales",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expenses",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Expenses",
+   "reqd": 1
+  },
+  {
+   "fieldname": "profit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Profit",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-23 23:11:00.068943",
+ "modified": "2024-05-23 19:09:03.085714",
  "modified_by": "Administrator",
  "module": "Restaurant Management System",
- "name": "Menu Category",
+ "name": "Reporting",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [

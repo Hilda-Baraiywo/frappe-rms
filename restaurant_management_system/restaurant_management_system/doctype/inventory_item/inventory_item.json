@@ -1,30 +1,41 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "IN.#####",
- "creation": "2024-05-21 21:09:53.589223",
+ "autoname": "INV.###",
+ "creation": "2024-05-23 18:59:17.261761",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1",
-  "category",
+  "item_name",
+  "item_type",
+  "description",
+  "cost_price",
+  "column_break_jm5o",
   "quantity",
-  "unit_of_measurement"
+  "unit_of_measurement",
+  "reorder_level"
  ],
  "fields": [
   {
-   "fieldname": "name1",
-   "fieldtype": "Text",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Name",
+   "label": "Item Name",
    "reqd": 1
   },
   {
-   "fieldname": "category",
+   "fieldname": "item_type",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Category",
-   "options": "Food\nBeverage\nSupplies",
+   "label": "Item Type",
+   "options": "Dry Food\nSpices\nMeat\nDairy\nFruits\nBeverages\nVegetables\nUtensils\nCutlery\nSupplies",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description",
    "reqd": 1
   },
   {
@@ -37,15 +48,30 @@
   {
    "fieldname": "unit_of_measurement",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Unit of Measurement",
-   "options": "kg\nliter\nunit",
+   "options": "kg\nliter\ncrate\ndozen\nsack",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cost_price",
+   "fieldtype": "Currency",
+   "label": "Cost Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jm5o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reorder_level",
+   "fieldtype": "Float",
+   "label": "Reorder Level",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-21 21:12:22.896342",
+ "modified": "2024-05-23 20:22:24.840877",
  "modified_by": "Administrator",
  "module": "Restaurant Management System",
  "name": "Inventory Item",

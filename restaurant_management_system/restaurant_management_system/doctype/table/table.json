@@ -1,37 +1,45 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "MC.###",
- "creation": "2024-05-23 18:36:46.032709",
+ "autoname": "TA.###",
+ "creation": "2024-05-23 18:16:22.376894",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "category",
-  "description"
+  "table_number",
+  "capacity",
+  "status"
  ],
  "fields": [
   {
-   "fieldname": "category",
-   "fieldtype": "Select",
+   "fieldname": "table_number",
+   "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Category",
-   "options": "Appetizer\nSoup\nSalad\nMain Course\nSide Dish\nDessert\nBeverages",
+   "label": "Table Number",
    "reqd": 1
   },
   {
-   "fieldname": "description",
-   "fieldtype": "Data",
+   "fieldname": "capacity",
+   "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Description",
+   "label": "Capacity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Available\nOccupied\nReserved",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-23 23:11:00.068943",
+ "modified": "2024-05-23 18:19:20.556530",
  "modified_by": "Administrator",
  "module": "Restaurant Management System",
- "name": "Menu Category",
+ "name": "Table",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [

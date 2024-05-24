@@ -1,30 +1,78 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "OR.#####",
- "creation": "2024-05-21 21:03:52.707292",
+ "autoname": "OR.###",
+ "creation": "2024-05-23 17:47:38.767633",
  "doctype": "DocType",
+ "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "order_number",
+  "order_date",
+  "order_item",
   "customer_name",
-  "datetime",
   "table_number",
-  "item",
-  "total_price"
+  "status",
+  "column_break_odij",
+  "total_amount",
+  "paid_amount",
+  "payment_status",
+  "is_published",
+  "route",
+  "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "customer_name",
-   "fieldtype": "Text",
+   "fieldname": "order_date",
+   "fieldtype": "Datetime",
    "in_list_view": 1,
-   "label": "Customer Name",
+   "label": "Order Date",
    "reqd": 1
   },
   {
-   "fieldname": "datetime",
-   "fieldtype": "Datetime",
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Date/Time",
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nIn Progress\nCompleted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_odij",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Paid\nUnpaid\nPartially Paid",
+   "reqd": 1
+  },
+  {
+   "fieldname": "order_item",
+   "fieldtype": "Table",
+   "label": "Order Item",
+   "options": "Order Item",
    "reqd": 1
   },
   {
@@ -32,26 +80,48 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Table Number",
-   "options": "Table Reservation",
+   "options": "Table",
    "reqd": 1
   },
   {
-   "fieldname": "item",
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published",
+   "reqd": 1
+  },
+  {
+   "fieldname": "route",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Item",
-   "reqd": 1
+   "label": "Route"
   },
   {
-   "fieldname": "total_price",
-   "fieldtype": "Currency",
-   "label": "Total Price",
-   "reqd": 1
+   "fieldname": "order_number",
+   "fieldtype": "Int",
+   "label": "Order Number",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1,
+   "reqd": 1,
+   "search_index": 1
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-05-21 21:09:23.647313",
+ "modified": "2024-05-24 09:32:20.689140",
  "modified_by": "Administrator",
  "module": "Restaurant Management System",
  "name": "Order",
@@ -72,6 +142,7 @@
   }
  ],
  "quick_entry": 1,
+ "route": "route",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],

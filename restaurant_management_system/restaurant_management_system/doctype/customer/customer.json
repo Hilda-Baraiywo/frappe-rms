@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CU.###",
+ "creation": "2024-05-23 17:44:32.927371",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_9kku",
+  "customer_name",
+  "phone_number",
+  "email_address",
+  "physical_address",
+  "loyalty_points"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_9kku",
+   "fieldtype": "Section Break",
+   "label": "Customer Information"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "physical_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Physical Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "loyalty_points",
+   "fieldtype": "Int",
+   "label": "Loyalty Points",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-24 10:25:33.971506",
+ "modified_by": "Administrator",
+ "module": "Restaurant Management System",
+ "name": "Customer",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,22 +1,25 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "Me.###",
- "creation": "2024-05-23 18:25:29.157510",
+ "autoname": "MI.###",
+ "creation": "2024-05-23 18:31:40.890098",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "menu_name",
+  "item_name",
   "description",
-  "availabiity"
+  "category",
+  "column_break_0jja",
+  "price",
+  "image",
+  "is_available"
  ],
  "fields": [
   {
-   "fieldname": "menu_name",
-   "fieldtype": "Select",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Menu Name",
-   "options": "Breakfast Specials\nLunch Favorites\nDinner Delights\nVegan Options\nKid's Menu\nDesserts\nBeverages",
+   "label": "Item Name",
    "reqd": 1
   },
   {
@@ -27,20 +30,43 @@
    "reqd": 1
   },
   {
-   "default": "0",
-   "fieldname": "availabiity",
-   "fieldtype": "Check",
+   "fieldname": "category",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Availabiity",
+   "label": "Category",
    "reqd": 1
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_available",
+   "fieldtype": "Check",
+   "label": "Is Available",
+   "reqd": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_0jja",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-23 23:33:29.692363",
+ "modified": "2024-05-24 10:56:06.039660",
  "modified_by": "Administrator",
  "module": "Restaurant Management System",
- "name": "Menu",
+ "name": "Menu Item",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
@@ -57,7 +83,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],

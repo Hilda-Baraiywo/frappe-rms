@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RE.###",
+ "creation": "2024-05-23 18:01:22.029457",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "reservation_number",
+  "reservation_date",
+  "customer_name",
+  "table",
+  "status",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "reservation_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Reservation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "table",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Table",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Reserved\nCancelled\nOccupied",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Reservation",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "reservation_number",
+   "fieldtype": "Int",
+   "label": "Reservation Number",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1,
+   "reqd": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-24 09:36:14.176021",
+ "modified_by": "Administrator",
+ "module": "Restaurant Management System",
+ "name": "Reservation",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

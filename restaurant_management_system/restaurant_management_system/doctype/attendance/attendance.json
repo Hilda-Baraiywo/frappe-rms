@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "AT.###",
+ "creation": "2024-05-23 18:54:41.627642",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "check_in",
+  "check_out",
+  "overtime_hours"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Check In",
+   "reqd": 1
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Check Out",
+   "reqd": 1
+  },
+  {
+   "fieldname": "overtime_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Overtime Hours",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-23 18:56:30.062110",
+ "modified_by": "Administrator",
+ "module": "Restaurant Management System",
+ "name": "Attendance",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
