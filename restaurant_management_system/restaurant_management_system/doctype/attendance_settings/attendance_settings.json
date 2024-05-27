@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-27 15:11:03.739990",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "working_hours_per_day",
+  "overtime_rate",
+  "break_duration",
+  "attendance_cutoff_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "working_hours_per_day",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Working Hours Per Day",
+   "reqd": 1
+  },
+  {
+   "fieldname": "overtime_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Overtime Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "break_duration",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Break Duration",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendance_cutoff_time",
+   "fieldtype": "Time",
+   "label": "Attendance Cutoff Time",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-05-27 15:13:43.965811",
+ "modified_by": "Administrator",
+ "module": "Restaurant Management System",
+ "name": "Attendance Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

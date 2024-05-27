@@ -28,7 +28,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-23 23:11:00.068943",
+ "modified": "2024-05-27 06:38:59.768623",
  "modified_by": "Administrator",
  "module": "Restaurant Management System",
  "name": "Menu Category",
@@ -49,8 +49,10 @@
   }
  ],
  "quick_entry": 1,
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "category",
  "track_changes": 1
 }

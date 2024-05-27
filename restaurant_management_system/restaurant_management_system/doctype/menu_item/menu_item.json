@@ -9,10 +9,13 @@
   "item_name",
   "description",
   "category",
+  "menu_type",
   "column_break_0jja",
   "price",
   "image",
-  "is_available"
+  "is_available",
+  "route",
+  "is_published"
  ],
  "fields": [
   {
@@ -20,20 +23,6 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Item Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Description",
-   "reqd": 1
-  },
-  {
-   "fieldname": "category",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Category",
    "reqd": 1
   },
   {
@@ -59,11 +48,47 @@
   {
    "fieldname": "column_break_0jja",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Menu Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "menu_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Menu Type",
+   "options": "Menu",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published",
+   "reqd": 1
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [],
- "modified": "2024-05-24 10:56:06.039660",
+ "modified": "2024-05-27 17:06:00.386058",
  "modified_by": "Administrator",
  "module": "Restaurant Management System",
  "name": "Menu Item",
@@ -83,8 +108,11 @@
    "write": 1
   }
  ],
+ "route": "menu_item",
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "item_name",
  "track_changes": 1
 }

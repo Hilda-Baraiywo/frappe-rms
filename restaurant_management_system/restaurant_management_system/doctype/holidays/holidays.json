@@ -1,45 +1,44 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "TA.###",
- "creation": "2024-05-23 18:16:22.376894",
+ "autoname": "HOL.###",
+ "creation": "2024-05-27 15:34:25.612642",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "table_number",
-  "capacity",
-  "status"
+  "holiday_name",
+  "date",
+  "description"
  ],
  "fields": [
   {
-   "fieldname": "table_number",
-   "fieldtype": "Int",
+   "fieldname": "holiday_name",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Table Number",
+   "label": "Holiday Name",
    "reqd": 1
   },
   {
-   "fieldname": "capacity",
-   "fieldtype": "Int",
+   "fieldname": "date",
+   "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Capacity",
+   "label": "Date",
    "reqd": 1
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Select",
+   "fieldname": "description",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Status",
-   "options": "Available\nOccupied\nReserved",
+   "label": "Description",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-27 12:21:39.092399",
+ "modified": "2024-05-27 15:38:38.648231",
  "modified_by": "Administrator",
  "module": "Restaurant Management System",
- "name": "Table",
+ "name": "Holidays",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
@@ -56,11 +55,7 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
- "show_title_field_in_link": 1,
- "sort_field": "creation",
+ "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "table_number",
- "track_changes": 1
+ "states": []
 }

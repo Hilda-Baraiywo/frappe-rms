@@ -6,45 +6,73 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "date",
-  "check_in",
-  "check_out",
-  "overtime_hours"
+  "attendance_date",
+  "check_in_time",
+  "check_out_time",
+  "overtime_hours",
+  "break_start_time",
+  "break_end_time",
+  "status",
+  "remarks"
  ],
  "fields": [
-  {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "check_in",
-   "fieldtype": "Time",
-   "in_list_view": 1,
-   "label": "Check In",
-   "reqd": 1
-  },
-  {
-   "fieldname": "check_out",
-   "fieldtype": "Time",
-   "in_list_view": 1,
-   "label": "Check Out",
-   "reqd": 1
-  },
   {
    "fieldname": "overtime_hours",
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Overtime Hours",
    "reqd": 1
+  },
+  {
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Attendance Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "check_in_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Check In Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "check_out_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Check Out Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "break_start_time",
+   "fieldtype": "Time",
+   "label": "Break Start Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "break_end_time",
+   "fieldtype": "Time",
+   "label": "Break End Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Present\nAbsent\nOn Leave\nHalf Day\nLate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-05-23 18:56:30.062110",
+ "modified": "2024-05-27 15:10:32.357449",
  "modified_by": "Administrator",
  "module": "Restaurant Management System",
  "name": "Attendance",

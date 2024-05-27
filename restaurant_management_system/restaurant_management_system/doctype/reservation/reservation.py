@@ -12,18 +12,18 @@ class Reservation(Document):
         self.validate_reservation_date()
         self.validate_number_of_people()
 
-def validate_reservation_number(self):
-    if frappe.db.exists("Reservation", {"reservation_number": self.reservation_number, "name": ["!=", self.name]}):
-        frappe.throw("Reservation number already exists.")
+    def validate_reservation_number(self):
+        if frappe.db.exists("Reservation", {"reservation_number": self.reservation_number, "name": ["!=", self.name]}):
+            frappe.throw("Reservation number already exists.")
 
-def validate_customer(self):
-    if not frappe.db.exists("Customer",self.customer):
-        frappe.throw("Customer does not exist.")
+    def validate_customer(self):
+        if not frappe.db.exists("Customer",self.customer_name):
+            frappe.throw("Customer name does not exist.")
 
-def validate_reservation_date(self):
-    if self.reservation_date <= frappe.utils.nowdate():
-        frappe.throw("Reservation date must be in the future.")
+    def validate_reservation_date(self):
+        if self.reservation_date <= frappe.utils.nowdate():
+            frappe.throw("Reservation date must be in the future.")
 
-def validate_number_of_people(self):
-    if self.number_of_people <= 0:
-        frappe.throw("Number of people must be a positive number.")
+    def validate_number_of_people(self):
+        if self.capacity <= 0:
+            frappe.throw("Number of people must be a positive number.")

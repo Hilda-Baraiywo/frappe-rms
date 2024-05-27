@@ -1,0 +1,17 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ title }}</h1>
+
+{% set image_alt = "{} Image".format(field_one)%}
+<img class="rounded mx-auto d-block" style="width: 250px" src="{{image}}"/>
+<div class="text-center mt-5">
+    <a href="http://127.0.0.1:8002/menu-item/new" class="btn btn-success">Make Order</a>
+</div>
+<p><strong>Category:</strong> {{ menu_item.category }}</p>
+<p><strong>Description:</strong> {{ menu_item.description }}</p>
+<p><strong>Price:</strong> {{ menu_item.price }}</p>
+<p><strong>Available:</strong> {{ 'Yes' if menu_item.is_available else 'No' }}</p>
+{% endblock %}
+
+<!-- this is a sample default web page template -->

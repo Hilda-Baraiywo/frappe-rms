@@ -7,13 +7,13 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "order_number",
   "order_date",
+  "order_number",
   "order_item",
   "customer_name",
   "table_number",
-  "status",
   "column_break_odij",
+  "status",
   "total_amount",
   "paid_amount",
   "payment_status",
@@ -27,14 +27,6 @@
    "fieldtype": "Datetime",
    "in_list_view": 1,
    "label": "Order Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "customer_name",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Customer Name",
-   "options": "Customer",
    "reqd": 1
   },
   {
@@ -66,13 +58,6 @@
    "fieldtype": "Select",
    "label": "Payment Status",
    "options": "Paid\nUnpaid\nPartially Paid",
-   "reqd": 1
-  },
-  {
-   "fieldname": "order_item",
-   "fieldtype": "Table",
-   "label": "Order Item",
-   "options": "Order Item",
    "reqd": 1
   },
   {
@@ -109,11 +94,21 @@
    "fieldname": "order_number",
    "fieldtype": "Int",
    "label": "Order Number",
-   "no_copy": 1,
-   "print_hide": 1,
-   "read_only": 1,
-   "reqd": 1,
-   "search_index": 1
+   "reqd": 1
+  },
+  {
+   "fieldname": "order_item",
+   "fieldtype": "Table",
+   "label": "Order Item",
+   "options": "Order Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1
   }
  ],
  "has_web_view": 1,
@@ -121,7 +116,7 @@
  "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-24 09:32:20.689140",
+ "modified": "2024-05-27 13:13:21.427833",
  "modified_by": "Administrator",
  "module": "Restaurant Management System",
  "name": "Order",
