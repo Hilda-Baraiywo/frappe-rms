@@ -2,23 +2,18 @@
 # For license information, please see license.txt
 
 import frappe
-from frappe.website.website_generator import WebsiteGenerator
+from frappe.model.document import Document
 
 
-class Order(WebsiteGenerator):
+class Order(Document):
     def before_save(self):
         self.validate_order_number()
-        self.validate_customer()
         self.validate_order_date()
         self.calculate_total_amount()
 
     def validate_order_number(self):
         if frappe.db.exists("Order", {"order_number": self.order_number, "name": ["!=", self.name]}):
             frappe.throw("Order number already exists.")
-
-    def validate_customer(self):
-        if not frappe.db.exists("Customer", self.customer_name):
-            frappe.throw("Customer does not exist.")
 
     def validate_order_date(self):
         if self.order_date > frappe.utils.nowdate():

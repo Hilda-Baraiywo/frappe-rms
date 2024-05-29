@@ -227,3 +227,6 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+website_context = {
+    "menu-items": "restaurant_management_system.www.menu_items.get_context"
+}

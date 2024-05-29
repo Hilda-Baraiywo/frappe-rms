@@ -1,17 +1,23 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-<h1>{{ title }}</h1>
 
-{% set image_alt = "{} Image".format(field_one)%}
-<img class="rounded mx-auto d-block" style="width: 250px" src="{{image}}"/>
-<div class="text-center mt-5">
-    <a href="http://127.0.0.1:8002/menu-item/new" class="btn btn-success">Make Order</a>
+<h1 class="text-center">{{ Menu Items }}</h1>
+
+<div class="row">
+    {% for doc in docs %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img class="card-img-top" style="width:18px" src="{{ doc.image }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ doc.item_name }}</h5>
+                <p class="card-text">{{ doc.description }}</p>
+                <a href="#" class="btn btn-success">View Details</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
 </div>
-<p><strong>Category:</strong> {{ menu_item.category }}</p>
-<p><strong>Description:</strong> {{ menu_item.description }}</p>
-<p><strong>Price:</strong> {{ menu_item.price }}</p>
-<p><strong>Available:</strong> {{ 'Yes' if menu_item.is_available else 'No' }}</p>
 {% endblock %}
 
 <!-- this is a sample default web page template -->

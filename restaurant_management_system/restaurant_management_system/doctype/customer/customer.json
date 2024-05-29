@@ -11,6 +11,7 @@
   "phone_number",
   "email_address",
   "physical_address",
+  "want_loyalty_points",
   "loyalty_points"
  ],
  "fields": [
@@ -44,6 +45,7 @@
    "fieldname": "loyalty_points",
    "fieldtype": "Int",
    "label": "Loyalty Points",
+   "mandatory_depends_on": "'eval: doc.want_loyalty_points?'",
    "reqd": 1
   },
   {
@@ -52,12 +54,19 @@
    "in_list_view": 1,
    "label": "Phone Number",
    "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "want_loyalty_points",
+   "fieldtype": "Check",
+   "label": "Want Loyalty Points?",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-05-27 12:42:38.327099",
+ "modified": "2024-05-28 15:06:46.856238",
  "modified_by": "Administrator",
  "module": "Restaurant Management System",
  "name": "Customer",

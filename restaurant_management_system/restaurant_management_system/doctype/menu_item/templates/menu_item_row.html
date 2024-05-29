@@ -1,9 +1,16 @@
-<div class="card" style="width: 18rem">
-	<img class="card-img-top" src="{{ doc.image }}"/>
-	<div class="card-body">
-		<h5 class="card-title">{{ doc.item_name }}</h5>
-		<p class="card-text">{{ doc.description }}</p>
-	</div>	
-	<a href="{{ doc.name }}" class="btn btn-success">View Details</a>
-</div>
-<!-- this is a sample default list template -->
+<!-- <div class="row">
+    {% for doc in docs %} -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img class="card-img-top" style="width:18px" src="{{ doc.image }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ doc.item_name }}</h5>
+                <p class="card-text">{{ doc.description }}</p>
+                <a href="#" class="btn btn-success">View Details</a>
+            </div>
+        </div>
+    </div>
+    <!-- {% endfor %}
+</div> -->
+
+<!-- this is a sample default list template
